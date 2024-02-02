@@ -91,7 +91,7 @@ app.get("/get-image/:id", async (req, res) => {
 });
 app.post("/api/photos", upload.single("files"), (req, res) => {
   const pythonScriptArgs = [req.file.destination, req.file.filename];
-  console.log("upload success!!");
+  // console.log("upload success!!");
   try {
     const pythonProcess = spawn("python", [
       pythonScriptPath,
